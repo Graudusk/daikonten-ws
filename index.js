@@ -28,7 +28,7 @@ app.use(express.json());
 app.get('/', async (req, res) => {
   return res.json({ status: 'OK' });
 });
-const port = process.env.WS_PORT || 1337;
+const port = process.env.WS_PORT || 8080;
 
 const server = app.listen(port, function () {
   const host = server.address().address;
