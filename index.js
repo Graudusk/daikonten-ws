@@ -24,6 +24,10 @@ app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 // app.use(logIncomingToConsole);
 app.use(express.json());
+
+app.get('/', async (req, res) => {
+  return res.json({ status: 'OK' });
+});
 const port = process.env.WS_PORT || 1337;
 
 const server = app.listen(port, function () {
