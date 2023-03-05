@@ -37,7 +37,7 @@ const wss = new WebSocket.Server({ server }, 'json');
 
 const getDriver = async function ({ driver_id, access_token }) {
   const response = await fetch(
-    process.env.HOST + '/drivers/driver/' + driver_id,
+    'https://daikonten.lm.r.appspot.com/drivers/driver/' + driver_id,
     {
       headers: {
         Authorization: 'Bearer ' + access_token,
